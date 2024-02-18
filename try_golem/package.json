@@ -1,0 +1,14 @@
+{
+  "name": "try_golem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@golem-sdk/golem-js": "^2.0.1"
+  }
+}
