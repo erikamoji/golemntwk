@@ -3,7 +3,7 @@ import ReputationABI from './abis/Reputation.json'
 
 // Contract ABI and address
 const CONTRACT_ABI = ReputationABI.abi;
-const CONTRACT_ADDRESS = '0x3ec7af18CB4444E870dd3c1dd3863f5331C05c4d';
+const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
 let web3;
 let reputationContract;

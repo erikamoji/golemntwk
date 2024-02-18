@@ -5,8 +5,8 @@ const ReputationABI = require('./abis/Reputation.json'); // Assuming this is the
 const web3 = new Web3(process.env.WEB3_PROVIDER_URL);
 
 // Contract ABI and address
-const CONTRACT_ABI = ReputationABI.abi; // Make sure this is correctly pointing to the ABI's array
-const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS; // It's good practice to keep this in an environment variable
+const CONTRACT_ABI = ReputationABI.abi;
+const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
 const reputationContract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
 
