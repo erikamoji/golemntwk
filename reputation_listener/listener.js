@@ -3,9 +3,9 @@ const { Web3 } = require("web3");
 
 const ReputationABI = require("./Reputation.json");
 
-const web3 = new Web3.providers.WebsocketProvider(
+const web3 = new Web3(new Web3.providers.WebsocketProvider(
   process.env.WEB3_PROVIDER_URL
-);
+));
 
 const CONTRACT_ABI = ReputationABI;
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
@@ -67,10 +67,14 @@ reputationContract.events.FeedbackAdded(
     fromBlock: "latest",
   },
   async function (error, event) {
+    console.log("Event listener triggered"); // Logs every time an event listener is triggered
+
     if (error) {
       console.error("Error on event", error);
       return;
     }
+
+    console.log("Event received:", event); // Logs the details of the event received
 
     const { user } = event.returnValues;
     console.log(`New feedback for user: ${user}`);

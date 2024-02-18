@@ -1,9 +1,9 @@
-import Web3 from 'web3';
+import { Web3 } from 'web3';
 import ReputationABI from './abis/Reputation.json'
 
 // Contract ABI and address
 const CONTRACT_ABI = ReputationABI.abi;
-const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
+const CONTRACT_ADDRESS = process.env.REACT_APP_CONTRACT_ADDRESS;
 
 let web3;
 let reputationContract;
